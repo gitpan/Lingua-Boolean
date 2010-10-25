@@ -25,4 +25,4 @@ requires:
 resources:
   bugtracker: http://github.com/doherty/Lingua-Boolean/issues
   repository: http://github.com/doherty/Lingua-Boolean
-version: 0.001
+version: 0.002

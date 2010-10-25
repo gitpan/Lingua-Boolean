@@ -3,9 +3,10 @@ use warnings;
 use utf8;
 package Lingua::Boolean::English;
 BEGIN {
-  $Lingua::Boolean::English::VERSION = '0.001';
+  $Lingua::Boolean::English::VERSION = '0.002';
 }
 # ABSTRACT: provides English rules to Lingua::Boolean
+# ENCODING: utf-8
 
 
 
@@ -35,17 +36,19 @@ sub new {
 
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 Lingua::Boolean::English - provides English rules to Lingua::Boolean
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 DESCRIPTION
 
-This module provides rules for English to L<Lingua::Boolean>.
+This module provides rules for English to C<Lingua::Boolean>.
 
 =head1 METHODS
 

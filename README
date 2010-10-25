@@ -2,7 +2,7 @@ NAME
     Lingua::Boolean - comprehensively parse boolean response strings
 
 VERSION
-    version 0.001
+    version 0.002
 
 SYNOPSIS
         use Lingua::Boolean;
@@ -40,16 +40,26 @@ SYNOPSIS
 
 DESCRIPTION
     Does that string look like they said "true" or "false"? To know, you
-    have to check a lot of things. Lingua::Boolean attempts to do that in a
-    single module, and do so for multiple languages.
-
-FUNCTIONS
-  import
-    Calling "import()" will, obviously, import subs into your namespace. By
-    default, Lingua::Boolean imports the sub "boolean()". You can request to
-    have "looks_true()", "looks_false()", and "languages()" imported.
+    have to check a lot of things. "Lingua::Boolean" attempts to do that in
+    a single module, and do so for multiple languages.
 
 METHODS
+    "Lingua::Boolean" provides both a functional/procedural and
+    object-oriented interfaces. Everything described below is an object
+    method, but can also be called as a function. "boolean()" is exported by
+    default, and can be called that way - everything else requires the
+    fully-qualified name.
+
+        use Lingua::Boolean;
+        my @languages = Lingua::Boolean::languages();
+        print boolean('yes') . "\n"; # boolean is exported by default
+
+  import
+    Calling "import()" will, obviously, import subs into your namespace. By
+    default, "Lingua::Boolean" imports the sub "boolean()". All other subs
+    should be accessed with the object-oriented interface, or use the fully
+    qualified name.
+
   new
     "new()" creates a new "Lingua::Boolean" object. You can optionally give
     it the code for the language you'll be working with, and only that
@@ -66,48 +76,13 @@ METHODS
         my $bool = Lingua::Boolean->new();
         print ($bool->boolean('oui', 'fr') ? "TRUE\n" : "FALSE\n");
 
-  languages
-    "languages()" returns the list of languages Lingua::Boolean knows about.
-
-        use Lingua::Boolean;
-        my @languages = Lingua::Boolean::languages(); # qw(English Français ...)
-
-    When called as an object method, returns the languages that object knows
-    about:
-
-        use Lingua::Boolean qw();
-        my $bool = Lingua::Boolean->new('fr');
-        my @languages = $bool->languages(); # qw(Français)
-
-  langs
-    "langs()" returns the list of language codes Lingua::Boolean knows
-    about.
-
-        use Lingua::Boolean;
-        my @lang_codes = Lingua::Boolean::langs(); # qw(en fr ...)
-
-    When called as an object method, returns the languages that object knows
-    about:
-
-        use Lingua::Boolean qw();
-        my $bool = Lingua::Boolean->new('fr');
-        my @lang_codes = $bool->langs(); # qw(fr)
-
   boolean
     "boolean()" tries to determine if the string *looks* true or *looks*
     false, and returns true or false accordingly. If both tests fail, dies.
     By default, uses *en*; pass a language code as the second parameter to
     check another language. Croaks if the language is unknown to
-    Lingua::Boolean (or the Lingua::Boolean object, if used as an object
+    "Lingua::Boolean" (or the "Lingua::Boolean" object, if used as an object
     method).
-
-    This sub is exported by default, and can be used functionally:
-
-        use Lingua::Boolean;
-        print (boolean('yes') ? "TRUE\n" : "FALSE\n");
-
-    Or, if you prefer object orientation, "boolean()" is also an object
-    method:
 
         use Lingua::Boolean qw();
         my $bool = Lingua::Boolean->new();
@@ -120,9 +95,42 @@ METHODS
         my $bool = Lingua::Boolean->new('fr');
         print ($bool->boolean('OUI') ? "TRUE\n" : "FALSE\n");
 
+    This sub is exported by default, and can be used functionally:
+
+        use Lingua::Boolean;
+        print (boolean('yes') ? "TRUE\n" : "FALSE\n");
+
+  languages
+    "languages()" returns the list of languages that "Lingua::Boolean" knows
+    about.
+
+        use Lingua::Boolean;
+        my @languages = Lingua::Boolean::languages(); # qw(English Français ...)
+
+    When called as an object method, returns the languages that that object
+    knows about:
+
+        use Lingua::Boolean qw();
+        my $bool = Lingua::Boolean->new('fr');
+        my @languages = $bool->languages(); # qw(Français)
+
+  langs
+    "langs()" returns the list of language *codes* that "Lingua::Boolean"
+    knows about.
+
+        use Lingua::Boolean;
+        my @lang_codes = Lingua::Boolean::langs(); # qw(en fr ...)
+
+    When called as an object method, returns the languages that that object
+    knows about:
+
+        use Lingua::Boolean qw();
+        my $bool = Lingua::Boolean->new('fr');
+        my @lang_codes = $bool->langs(); # qw(fr)
+
 EXPORTS
-    By default, Lingua::Boolean exports "boolean()". All other methods must
-    be fully qualified - or use the object oriented interface.
+    By default, "Lingua::Boolean" exports "boolean()". All other methods
+    must be fully qualified - or use the object-oriented interface.
 
 AVAILABILITY
     The latest version of this module is available from the Comprehensive

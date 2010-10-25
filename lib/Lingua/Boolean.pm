@@ -6,9 +6,10 @@ use 5.0100;
 
 package Lingua::Boolean;
 BEGIN {
-  $Lingua::Boolean::VERSION = '0.001';
+  $Lingua::Boolean::VERSION = '0.002';
 }
 # ABSTRACT: comprehensively parse boolean response strings
+# ENCODING: utf-8
 
 use Carp;
 use boolean 0.21 qw(true false);
@@ -41,25 +42,6 @@ sub new {
 }
 
 
-sub languages {
-    my $self = ref $_[0] eq __PACKAGE__ ? shift : __PACKAGE__->new();
-
-    my @long_names;
-    foreach my $l (keys %{ $self->{languages} }) {
-        push @long_names, $self->{languages}->{$l}->{LANGUAGE};
-    }
-    return @long_names;
-}
-
-
-sub langs {
-    my $self = ref $_[0] eq __PACKAGE__ ? shift : __PACKAGE__->new();
-
-    my @lang_codes = keys %{ $self->{languages} };
-    return @lang_codes;
-}
-
-
 sub _boolean {
     my $self    = shift;
     my $to_test = shift;
@@ -84,6 +66,25 @@ sub boolean {
     _trim($to_test);
 
     return $self->_boolean($to_test, $lang);
+}
+
+
+sub languages {
+    my $self = ref $_[0] eq __PACKAGE__ ? shift : __PACKAGE__->new();
+
+    my @long_names;
+    foreach my $l (keys %{ $self->{languages} }) {
+        push @long_names, $self->{languages}->{$l}->{LANGUAGE};
+    }
+    return @long_names;
+}
+
+
+sub langs {
+    my $self = ref $_[0] eq __PACKAGE__ ? shift : __PACKAGE__->new();
+
+    my @lang_codes = keys %{ $self->{languages} };
+    return @lang_codes;
 }
 
 
@@ -122,13 +123,15 @@ sub _trim { # http://www.perlmonks.org/?node_id=36684
 
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 Lingua::Boolean - comprehensively parse boolean response strings
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
@@ -168,19 +171,26 @@ version 0.001
 =head1 DESCRIPTION
 
 Does that string look like they said "true" or "false"? To know, you
-have to check a lot of things. L<Lingua::Boolean> attempts to do that
+have to check a lot of things. C<Lingua::Boolean> attempts to do that
 in a single module, and do so for multiple languages.
 
-=head1 FUNCTIONS
+=head1 METHODS
+
+C<Lingua::Boolean> provides both a functional/procedural and object-oriented
+interfaces. Everything described below is an object method, but can also be
+called as a function. C<boolean()> is exported by default, and can be called
+that way - everything else requires the fully-qualified name.
+
+    use Lingua::Boolean;
+    my @languages = Lingua::Boolean::languages();
+    print boolean('yes') . "\n"; # boolean is exported by default
 
 =head2 import
 
 Calling C<import()> will, obviously, import subs into your namespace.
-By default, L<Lingua::Boolean> imports the sub C<boolean()>. You can
-request to have C<looks_true()>, C<looks_false()>, and C<languages()>
-imported.
-
-=head1 METHODS
+By default, C<Lingua::Boolean> imports the sub C<boolean()>. All other
+subs should be accessed with the object-oriented interface, or use
+the fully qualified name.
 
 =head2 new
 
@@ -199,47 +209,13 @@ Otherwise, C<boolean()> accept the language code as the second parameter:
     my $bool = Lingua::Boolean->new();
     print ($bool->boolean('oui', 'fr') ? "TRUE\n" : "FALSE\n");
 
-=head2 languages
-
-C<languages()> returns the list of languages L<Lingua::Boolean> knows about.
-
-    use Lingua::Boolean;
-    my @languages = Lingua::Boolean::languages(); # qw(English Français ...)
-
-When called as an object method, returns the languages B<that object> knows
-about:
-
-    use Lingua::Boolean qw();
-    my $bool = Lingua::Boolean->new('fr');
-    my @languages = $bool->languages(); # qw(Français)
-
-=head2 langs
-
-C<langs()> returns the list of language codes L<Lingua::Boolean> knows about.
-
-    use Lingua::Boolean;
-    my @lang_codes = Lingua::Boolean::langs(); # qw(en fr ...)
-
-When called as an object method, returns the languages B<that object> knows
-about:
-
-    use Lingua::Boolean qw();
-    my $bool = Lingua::Boolean->new('fr');
-    my @lang_codes = $bool->langs(); # qw(fr)
-
-=head2 B<boolean>
+=head2 boolean
 
 B<C<boolean()>> tries to determine if the string I<looks> true or I<looks> false, and
 returns true or false accordingly. If both tests fail, dies. By default, uses I<en>; pass
 a language code as the second parameter to check another language. Croaks if the language
-is unknown to Lingua::Boolean (or the Lingua::Boolean object, if used as an object method).
-
-This sub is exported by default, and can be used functionally:
-
-    use Lingua::Boolean;
-    print (boolean('yes') ? "TRUE\n" : "FALSE\n");
-
-Or, if you prefer object orientation, C<boolean()> is also an object method:
+is unknown to C<Lingua::Boolean> (or the C<Lingua::Boolean> object, if used as an object
+method).
 
     use Lingua::Boolean qw();
     my $bool = Lingua::Boolean->new();
@@ -251,10 +227,43 @@ If you specify the language in the constructor, you needn't specify it in the ca
     my $bool = Lingua::Boolean->new('fr');
     print ($bool->boolean('OUI') ? "TRUE\n" : "FALSE\n");
 
+This sub is exported by default, and can be used functionally:
+
+    use Lingua::Boolean;
+    print (boolean('yes') ? "TRUE\n" : "FALSE\n");
+
+=head2 languages
+
+C<languages()> returns the list of languages that C<Lingua::Boolean> knows about.
+
+    use Lingua::Boolean;
+    my @languages = Lingua::Boolean::languages(); # qw(English Français ...)
+
+When called as an object method, returns the languages that B<that object> knows
+about:
+
+    use Lingua::Boolean qw();
+    my $bool = Lingua::Boolean->new('fr');
+    my @languages = $bool->languages(); # qw(Français)
+
+=head2 langs
+
+C<langs()> returns the list of language I<codes> that C<Lingua::Boolean> knows about.
+
+    use Lingua::Boolean;
+    my @lang_codes = Lingua::Boolean::langs(); # qw(en fr ...)
+
+When called as an object method, returns the languages that B<that object> knows
+about:
+
+    use Lingua::Boolean qw();
+    my $bool = Lingua::Boolean->new('fr');
+    my @lang_codes = $bool->langs(); # qw(fr)
+
 =head1 EXPORTS
 
-By default, L<Lingua::Boolean> exports C<boolean()>. All other methods
-must be fully qualified - or use the object oriented interface.
+By default, C<Lingua::Boolean> exports C<boolean()>. All other methods
+must be fully qualified - or use the object-oriented interface.
 
 =head1 AVAILABILITY
 

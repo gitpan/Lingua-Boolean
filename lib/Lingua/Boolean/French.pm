@@ -3,9 +3,10 @@ use warnings;
 use utf8;
 package Lingua::Boolean::French;
 BEGIN {
-  $Lingua::Boolean::French::VERSION = '0.001';
+  $Lingua::Boolean::French::VERSION = '0.002';
 }
 # ABSTRACT: provides French rules to Lingua::Boolean
+# ENCODING: utf-8
 
 
 
@@ -35,17 +36,19 @@ sub new {
 
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 Lingua::Boolean::French - provides French rules to Lingua::Boolean
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 DESCRIPTION
 
-This module provides rules for French to L<Lingua::Boolean>.
+This module provides rules for French to C<Lingua::Boolean>.
 
 =head1 METHODS
 

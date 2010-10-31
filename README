@@ -2,7 +2,7 @@ NAME
     Lingua::Boolean - comprehensively parse boolean response strings
 
 VERSION
-    version 0.002
+    version 0.003
 
 SYNOPSIS
         use Lingua::Boolean;
@@ -151,7 +151,7 @@ BUGS AND LIMITATIONS
     <http://github.com/doherty/Lingua-Boolean/issues>.
 
 AUTHOR
-    Mike Doherty <doherty@cs.dal.ca>
+    Mike Doherty <doherty@cpan.org>
 
 COPYRIGHT AND LICENSE
     This software is Copyright (c) 2010 by Mike Doherty.

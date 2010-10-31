@@ -3,7 +3,7 @@ use warnings;
 use utf8;
 package Lingua::Boolean::English;
 BEGIN {
-  $Lingua::Boolean::English::VERSION = '0.002';
+  $Lingua::Boolean::English::VERSION = '0.003';
 }
 # ABSTRACT: provides English rules to Lingua::Boolean
 # ENCODING: utf-8
@@ -44,7 +44,7 @@ Lingua::Boolean::English - provides English rules to Lingua::Boolean
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 DESCRIPTION
 
@@ -81,7 +81,7 @@ L<http://github.com/doherty/Lingua-Boolean/issues>.
 
 =head1 AUTHOR
 
-Mike Doherty <doherty@cs.dal.ca>
+Mike Doherty <doherty@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

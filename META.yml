@@ -1,7 +1,7 @@
 ---
 abstract: 'comprehensively parse boolean response strings'
 author:
-  - 'Mike Doherty <doherty@cs.dal.ca>'
+  - 'Mike Doherty <doherty@cpan.org>'
 build_requires:
   File::Find: 0
   File::Temp: 0
@@ -20,9 +20,9 @@ requires:
   Exporter: 0
   Module::Pluggable: 0
   boolean: 0.21
-  perl: 5.0100
+  perl: 5.010001
   utf8: 0
 resources:
   bugtracker: http://github.com/doherty/Lingua-Boolean/issues
   repository: http://github.com/doherty/Lingua-Boolean
-version: 0.002
+version: 0.003

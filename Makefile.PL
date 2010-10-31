@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-BEGIN { require 5.0100; }
+BEGIN { require 5.010001; }
 
 use ExtUtils::MakeMaker 6.31;
 
@@ -10,7 +10,7 @@ use ExtUtils::MakeMaker 6.31;
 
 my %WriteMakefileArgs = (
   'ABSTRACT' => 'comprehensively parse boolean response strings',
-  'AUTHOR' => 'Mike Doherty <doherty@cs.dal.ca>',
+  'AUTHOR' => 'Mike Doherty <doherty@cpan.org>',
   'BUILD_REQUIRES' => {
     'File::Find' => '0',
     'File::Temp' => '0',
@@ -30,7 +30,7 @@ my %WriteMakefileArgs = (
     'boolean' => '0.21',
     'utf8' => '0'
   },
-  'VERSION' => '0.002',
+  'VERSION' => '0.003',
   'test' => {
     'TESTS' => 't/*.t t/lang/*.t'
   }

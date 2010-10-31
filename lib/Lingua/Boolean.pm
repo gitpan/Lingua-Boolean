@@ -2,11 +2,11 @@ use strict;
 use warnings;
 # use diagnostics;
 # use Data::Dumper;
-use 5.0100;
+use 5.010001;
 
 package Lingua::Boolean;
 BEGIN {
-  $Lingua::Boolean::VERSION = '0.002';
+  $Lingua::Boolean::VERSION = '0.003';
 }
 # ABSTRACT: comprehensively parse boolean response strings
 # ENCODING: utf-8
@@ -131,7 +131,7 @@ Lingua::Boolean - comprehensively parse boolean response strings
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 
@@ -285,7 +285,7 @@ L<http://github.com/doherty/Lingua-Boolean/issues>.
 
 =head1 AUTHOR
 
-Mike Doherty <doherty@cs.dal.ca>
+Mike Doherty <doherty@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

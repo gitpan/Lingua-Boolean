@@ -1,5 +1,7 @@
 Revision history for Perl module Lingua::Boolean
 
+0.003     2010-10-31
+    * Require Perl 5.10.1 - RT#62574: Fails on perl 5.10.0
 0.002     2010-10-25
     * Updated documentation
     * Specified encoding in POD

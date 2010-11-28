@@ -2,7 +2,7 @@ NAME
     Lingua::Boolean - comprehensively parse boolean response strings
 
 VERSION
-    version 0.003
+    version 0.004
 
 SYNOPSIS
         use Lingua::Boolean;
@@ -139,9 +139,9 @@ AVAILABILITY
     <http://search.cpan.org/dist/Lingua-Boolean/>.
 
     The development version lives at
-    <http://github.com/doherty/Lingua-Boolean> and may be cloned from
-    <git://github.com/doherty/Lingua-Boolean>. Instead of sending patches,
-    please fork this project using the standard git and github
+    <http://github.com/doherty/Lingua-Boolean.git> and may be cloned from
+    <git://github.com/doherty/Lingua-Boolean.git>. Instead of sending
+    patches, please fork this project using the standard git and github
     infrastructure.
 
 BUGS AND LIMITATIONS

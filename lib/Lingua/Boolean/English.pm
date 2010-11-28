@@ -3,10 +3,9 @@ use warnings;
 use utf8;
 package Lingua::Boolean::English;
 BEGIN {
-  $Lingua::Boolean::English::VERSION = '0.003';
+  $Lingua::Boolean::English::VERSION = '0.004';
 }
 # ABSTRACT: provides English rules to Lingua::Boolean
-# ENCODING: utf-8
 
 
 
@@ -44,7 +43,7 @@ Lingua::Boolean::English - provides English rules to Lingua::Boolean
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 DESCRIPTION
 
@@ -67,8 +66,8 @@ The latest version of this module is available from the Comprehensive Perl
 Archive Network (CPAN). Visit L<http://www.perl.com/CPAN/> to find a CPAN
 site near you, or see L<http://search.cpan.org/dist/Lingua-Boolean/>.
 
-The development version lives at L<http://github.com/doherty/Lingua-Boolean>
-and may be cloned from L<git://github.com/doherty/Lingua-Boolean>.
+The development version lives at L<http://github.com/doherty/Lingua-Boolean.git>
+and may be cloned from L<git://github.com/doherty/Lingua-Boolean.git>.
 Instead of sending patches, please fork this project using the standard
 git and github infrastructure.
 

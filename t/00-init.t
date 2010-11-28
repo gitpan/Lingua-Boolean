@@ -20,7 +20,7 @@ my @should_have_names = (
 subtest 'oo' => sub {
     plan tests => 4;
     my $bool = new_ok('Lingua::Boolean');
-    can_ok($bool, qw(boolean langs languages _looks_true _looks_false _trim));
+    can_ok($bool, qw(boolean langs languages _looks_true _looks_false));
     {   # Language codes
         my @has = $bool->langs();
         is_deeply(\@has, \@should_have_codes, 'Available language codes OK');

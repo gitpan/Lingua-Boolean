@@ -27,10 +27,11 @@ my %WriteMakefileArgs = (
     'Carp' => '0',
     'Exporter' => '0',
     'Module::Pluggable' => '0',
+    'String::Trim' => '0',
     'boolean' => '0.21',
     'utf8' => '0'
   },
-  'VERSION' => '0.003',
+  'VERSION' => '0.004',
   'test' => {
     'TESTS' => 't/*.t t/lang/*.t'
   }

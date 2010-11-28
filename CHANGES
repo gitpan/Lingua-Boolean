@@ -1,5 +1,7 @@
 Revision history for Perl module Lingua::Boolean
 
+0.005     2010-11-28
+    * Use Perl_5 license: your choice of GPL or Artistic
 0.004     2010-11-28
     * Use String::Trim to provide a trim function
 0.003     2010-10-31
@@ -7,6 +9,5 @@ Revision history for Perl module Lingua::Boolean
 0.002     2010-10-25
     * Updated documentation
     * Specified encoding in POD
-
 0.001     2010-10-24
     * Initial version

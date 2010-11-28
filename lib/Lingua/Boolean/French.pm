@@ -3,7 +3,7 @@ use warnings;
 use utf8;
 package Lingua::Boolean::French;
 BEGIN {
-  $Lingua::Boolean::French::VERSION = '0.004';
+  $Lingua::Boolean::French::VERSION = '0.005';
 }
 # ABSTRACT: provides French rules to Lingua::Boolean
 
@@ -43,7 +43,7 @@ Lingua::Boolean::French - provides French rules to Lingua::Boolean
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =head1 DESCRIPTION
 
@@ -84,11 +84,10 @@ Mike Doherty <doherty@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2010 by Mike Doherty.
+This software is copyright (c) 2010 by Mike Doherty.
 
-This is free software, licensed under:
-
-  The GNU General Public License, Version 3, June 2007
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
 

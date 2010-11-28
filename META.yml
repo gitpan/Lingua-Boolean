@@ -10,7 +10,7 @@ configure_requires:
   ExtUtils::MakeMaker: 6.31
 dynamic_config: 0
 generated_by: 'Dist::Zilla version 4.102345, CPAN::Meta::Converter version 2.102400'
-license: gpl
+license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
@@ -26,4 +26,4 @@ requires:
 resources:
   bugtracker: http://github.com/doherty/Lingua-Boolean/issues
   repository: git://github.com/doherty/Lingua-Boolean.git
-version: 0.004
+version: 0.005

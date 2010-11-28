@@ -21,7 +21,7 @@ my %WriteMakefileArgs = (
   },
   'DISTNAME' => 'Lingua-Boolean',
   'EXE_FILES' => [],
-  'LICENSE' => 'gpl',
+  'LICENSE' => 'perl',
   'NAME' => 'Lingua::Boolean',
   'PREREQ_PM' => {
     'Carp' => '0',
@@ -31,7 +31,7 @@ my %WriteMakefileArgs = (
     'boolean' => '0.21',
     'utf8' => '0'
   },
-  'VERSION' => '0.004',
+  'VERSION' => '0.005',
   'test' => {
     'TESTS' => 't/*.t t/lang/*.t'
   }

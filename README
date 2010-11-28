@@ -2,7 +2,7 @@ NAME
     Lingua::Boolean - comprehensively parse boolean response strings
 
 VERSION
-    version 0.004
+    version 0.005
 
 SYNOPSIS
         use Lingua::Boolean;
@@ -154,9 +154,8 @@ AUTHOR
     Mike Doherty <doherty@cpan.org>
 
 COPYRIGHT AND LICENSE
-    This software is Copyright (c) 2010 by Mike Doherty.
+    This software is copyright (c) 2010 by Mike Doherty.
 
-    This is free software, licensed under:
-
-      The GNU General Public License, Version 3, June 2007
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
 

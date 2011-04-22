@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 use Test::More 0.94 tests => 3;
+use Test::Builder 0.94 qw();
 
 use Lingua::Boolean;
 

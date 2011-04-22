@@ -2,6 +2,7 @@ use strict;
 use warnings;
 use 5.0100;
 use Test::More 0.94 tests => 3;
+use Test::Builder 0.94 qw();
 
 use Lingua::Boolean;
 my $bool = Lingua::Boolean->new();

@@ -1,15 +1,9 @@
+package Lingua::Boolean;
+# ABSTRACT: comprehensively parse boolean response strings
 use strict;
 use warnings;
-# use diagnostics;
-# use Data::Dumper;
 use 5.010001;
-
-package Lingua::Boolean;
-BEGIN {
-  $Lingua::Boolean::VERSION = '0.005';
-}
-# ABSTRACT: comprehensively parse boolean response strings
-
+our $VERSION = '0.006'; # VERSION
 use Carp;
 use boolean 0.21 qw(true false);
 use String::Trim;
@@ -124,7 +118,7 @@ Lingua::Boolean - comprehensively parse boolean response strings
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =head1 SYNOPSIS
 
@@ -264,17 +258,22 @@ The latest version of this module is available from the Comprehensive Perl
 Archive Network (CPAN). Visit L<http://www.perl.com/CPAN/> to find a CPAN
 site near you, or see L<http://search.cpan.org/dist/Lingua-Boolean/>.
 
-The development version lives at L<http://github.com/doherty/Lingua-Boolean.git>
+The development version lives at L<http://github.com/doherty/Lingua-Boolean>
 and may be cloned from L<git://github.com/doherty/Lingua-Boolean.git>.
 Instead of sending patches, please fork this project using the standard
 git and github infrastructure.
+
+=head1 SOURCE
+
+The development version is on github at L<http://github.com/doherty/Lingua-Boolean>
+and may be cloned from L<git://github.com/doherty/Lingua-Boolean.git>
 
 =head1 BUGS AND LIMITATIONS
 
 No bugs have been reported.
 
 Please report any bugs or feature requests through the web interface at
-L<http://github.com/doherty/Lingua-Boolean/issues>.
+L<https://github.com/doherty/Lingua-Boolean/issues>.
 
 =head1 AUTHOR
 

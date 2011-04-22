@@ -1,7 +1,8 @@
 use strict;
 use warnings;
 use utf8;
-use Test::More 0.75 tests => 3;
+use Test::More 0.94 tests => 3;
+use Test::Builder 0.94 qw();
 
 BEGIN {
     use_ok('Lingua::Boolean', qw(boolean));

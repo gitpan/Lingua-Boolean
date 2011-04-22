@@ -14,6 +14,7 @@ my %WriteMakefileArgs = (
   'BUILD_REQUIRES' => {
     'File::Find' => '0',
     'File::Temp' => '0',
+    'Test::Builder' => '0.94',
     'Test::More' => '0.94'
   },
   'CONFIGURE_REQUIRES' => {
@@ -31,7 +32,7 @@ my %WriteMakefileArgs = (
     'boolean' => '0.21',
     'utf8' => '0'
   },
-  'VERSION' => '0.005',
+  'VERSION' => '0.006',
   'test' => {
     'TESTS' => 't/*.t t/lang/*.t'
   }

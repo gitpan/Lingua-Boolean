@@ -1,11 +1,9 @@
+package Lingua::Boolean::French;
+# ABSTRACT: provides French rules to Lingua::Boolean
 use strict;
 use warnings;
 use utf8;
-package Lingua::Boolean::French;
-BEGIN {
-  $Lingua::Boolean::French::VERSION = '0.005';
-}
-# ABSTRACT: provides French rules to Lingua::Boolean
+our $VERSION = '0.006'; # VERSION
 
 
 
@@ -43,7 +41,7 @@ Lingua::Boolean::French - provides French rules to Lingua::Boolean
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =head1 DESCRIPTION
 
@@ -66,17 +64,22 @@ The latest version of this module is available from the Comprehensive Perl
 Archive Network (CPAN). Visit L<http://www.perl.com/CPAN/> to find a CPAN
 site near you, or see L<http://search.cpan.org/dist/Lingua-Boolean/>.
 
-The development version lives at L<http://github.com/doherty/Lingua-Boolean.git>
+The development version lives at L<http://github.com/doherty/Lingua-Boolean>
 and may be cloned from L<git://github.com/doherty/Lingua-Boolean.git>.
 Instead of sending patches, please fork this project using the standard
 git and github infrastructure.
+
+=head1 SOURCE
+
+The development version is on github at L<http://github.com/doherty/Lingua-Boolean>
+and may be cloned from L<git://github.com/doherty/Lingua-Boolean.git>
 
 =head1 BUGS AND LIMITATIONS
 
 No bugs have been reported.
 
 Please report any bugs or feature requests through the web interface at
-L<http://github.com/doherty/Lingua-Boolean/issues>.
+L<https://github.com/doherty/Lingua-Boolean/issues>.
 
 =head1 AUTHOR
 

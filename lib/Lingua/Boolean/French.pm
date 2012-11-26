@@ -3,7 +3,7 @@ package Lingua::Boolean::French;
 use strict;
 use warnings;
 use utf8;
-our $VERSION = '0.006'; # VERSION
+our $VERSION = '0.007'; # VERSION
 
 
 
@@ -29,7 +29,7 @@ sub new {
 
 1;
 
-
+__END__
 
 =pod
 
@@ -41,7 +41,7 @@ Lingua::Boolean::French - provides French rules to Lingua::Boolean
 
 =head1 VERSION
 
-version 0.006
+version 0.007
 
 =head1 DESCRIPTION
 
@@ -60,14 +60,11 @@ L<Lingua::Boolean>
 
 =head1 AVAILABILITY
 
+The project homepage is L<http://p3rl.org/Lingua::Boolean>.
+
 The latest version of this module is available from the Comprehensive Perl
 Archive Network (CPAN). Visit L<http://www.perl.com/CPAN/> to find a CPAN
-site near you, or see L<http://search.cpan.org/dist/Lingua-Boolean/>.
-
-The development version lives at L<http://github.com/doherty/Lingua-Boolean>
-and may be cloned from L<git://github.com/doherty/Lingua-Boolean.git>.
-Instead of sending patches, please fork this project using the standard
-git and github infrastructure.
+site near you, or see L<https://metacpan.org/module/Lingua::Boolean/>.
 
 =head1 SOURCE
 
@@ -76,10 +73,8 @@ and may be cloned from L<git://github.com/doherty/Lingua-Boolean.git>
 
 =head1 BUGS AND LIMITATIONS
 
-No bugs have been reported.
-
-Please report any bugs or feature requests through the web interface at
-L<https://github.com/doherty/Lingua-Boolean/issues>.
+You can make new bug reports, and view existing ones, through the
+web interface at L<https://github.com/doherty/Lingua-Boolean/issues>.
 
 =head1 AUTHOR
 
@@ -93,6 +88,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__

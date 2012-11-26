@@ -5,17 +5,23 @@ author:
 build_requires:
   File::Find: 0
   File::Temp: 0
+  Module::Build: 0.3601
   Test::Builder: 0.94
   Test::More: 0.94
 configure_requires:
-  ExtUtils::MakeMaker: 6.31
+  Module::Build: 0.3601
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.110930'
+generated_by: 'Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Lingua-Boolean
+no_index:
+  directory:
+    - corpus
+    - inc
+    - examples
 requires:
   Carp: 0
   Exporter: 0
@@ -23,8 +29,11 @@ requires:
   String::Trim: 0
   boolean: 0.21
   perl: 5.010001
+  strict: 0
   utf8: 0
+  warnings: 0
 resources:
   bugtracker: https://github.com/doherty/Lingua-Boolean/issues
+  homepage: http://p3rl.org/Lingua::Boolean
   repository: git://github.com/doherty/Lingua-Boolean.git
-version: 0.006
+version: 0.007

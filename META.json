@@ -4,7 +4,7 @@
       "Mike Doherty <doherty@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.110930",
+   "generated_by" : "Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -13,27 +13,49 @@
       "version" : "2"
    },
    "name" : "Lingua-Boolean",
+   "no_index" : {
+      "directory" : [
+         "corpus",
+         "inc",
+         "examples"
+      ]
+   },
    "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Module::Build" : "0.3601"
+         }
+      },
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.31"
+            "Module::Build" : "0.3601"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Pod::Coverage::TrustPod" : "0",
+            "Test::CPAN::Meta" : "0",
+            "Test::Pod" : "1.41",
+            "Test::Pod::Coverage" : "1.08"
          }
       },
       "runtime" : {
          "requires" : {
-            "Carp" : 0,
-            "Exporter" : 0,
-            "Module::Pluggable" : 0,
-            "String::Trim" : 0,
+            "Carp" : "0",
+            "Exporter" : "0",
+            "Module::Pluggable" : "0",
+            "String::Trim" : "0",
             "boolean" : "0.21",
             "perl" : "5.010001",
-            "utf8" : 0
+            "strict" : "0",
+            "utf8" : "0",
+            "warnings" : "0"
          }
       },
       "test" : {
          "requires" : {
-            "File::Find" : 0,
-            "File::Temp" : 0,
+            "File::Find" : "0",
+            "File::Temp" : "0",
             "Test::Builder" : "0.94",
             "Test::More" : "0.94"
          }
@@ -44,12 +66,13 @@
       "bugtracker" : {
          "web" : "https://github.com/doherty/Lingua-Boolean/issues"
       },
+      "homepage" : "http://p3rl.org/Lingua::Boolean",
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/doherty/Lingua-Boolean.git",
          "web" : "https://github.com/doherty/Lingua-Boolean"
       }
    },
-   "version" : "0.006"
+   "version" : "0.007"
 }
 

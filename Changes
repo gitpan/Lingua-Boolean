@@ -1,5 +1,9 @@
 Revision history for Perl module Lingua-Boolean
 
+0.007     2012-11-25
+    * minor POD fix
+    * Test suite updates
+
 0.006     2011-04-22
     * Packaging changes only
 

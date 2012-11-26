@@ -1,3 +1,4 @@
+#!perl
 use strict;
 use warnings;
 use 5.0100;

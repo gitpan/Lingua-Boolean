@@ -3,7 +3,7 @@ package Lingua::Boolean;
 use strict;
 use warnings;
 use 5.010001;
-our $VERSION = '0.006'; # VERSION
+our $VERSION = '0.007'; # VERSION
 use Carp;
 use boolean 0.21 qw(true false);
 use String::Trim;
@@ -106,7 +106,7 @@ sub _looks_false {
 
 1;
 
-
+__END__
 
 =pod
 
@@ -118,7 +118,7 @@ Lingua::Boolean - comprehensively parse boolean response strings
 
 =head1 VERSION
 
-version 0.006
+version 0.007
 
 =head1 SYNOPSIS
 
@@ -163,7 +163,7 @@ in a single module, and do so for multiple languages.
 
 =head1 METHODS
 
-C<Lingua::Boolean> provides both a functional/procedural and object-oriented
+C<Lingua::Boolean> provides both functional/procedural and object-oriented
 interfaces. Everything described below is an object method, but can also be
 called as a function. C<boolean()> is exported by default, and can be called
 that way - everything else requires the fully-qualified name.
@@ -254,14 +254,11 @@ must be fully qualified - or use the object-oriented interface.
 
 =head1 AVAILABILITY
 
+The project homepage is L<http://p3rl.org/Lingua::Boolean>.
+
 The latest version of this module is available from the Comprehensive Perl
 Archive Network (CPAN). Visit L<http://www.perl.com/CPAN/> to find a CPAN
-site near you, or see L<http://search.cpan.org/dist/Lingua-Boolean/>.
-
-The development version lives at L<http://github.com/doherty/Lingua-Boolean>
-and may be cloned from L<git://github.com/doherty/Lingua-Boolean.git>.
-Instead of sending patches, please fork this project using the standard
-git and github infrastructure.
+site near you, or see L<https://metacpan.org/module/Lingua::Boolean/>.
 
 =head1 SOURCE
 
@@ -270,10 +267,8 @@ and may be cloned from L<git://github.com/doherty/Lingua-Boolean.git>
 
 =head1 BUGS AND LIMITATIONS
 
-No bugs have been reported.
-
-Please report any bugs or feature requests through the web interface at
-L<https://github.com/doherty/Lingua-Boolean/issues>.
+You can make new bug reports, and view existing ones, through the
+web interface at L<https://github.com/doherty/Lingua-Boolean/issues>.
 
 =head1 AUTHOR
 
@@ -287,6 +282,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__

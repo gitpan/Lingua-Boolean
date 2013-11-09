@@ -1,14 +1,14 @@
 # NAME
 
-Lingua::Boolean - comprehensively parse boolean response strings
+Lingua::Boolean - DEPRECATED module to comprehensively parse boolean response strings
 
 # VERSION
 
-version 0.007
+version 0.008
 
 # SYNOPSIS
 
-    use Lingua::Boolean;
+    use Lingua::Boolean; # NO! Don't use it - use Lingua::Boolean::Tiny
 
     # Use functional/procedural interface
     print "Do it? ";
@@ -42,6 +42,11 @@ version 0.007
     }
 
 # DESCRIPTION
+
+__This module is deprecated.__ It began as an experiment with the concept,
+as well as API design. The experiment worked -- we proved that this
+module has a bad interface. If you are still interested in the conceptual
+experiment, give [Lingua::Boolean::Tiny](https://metacpan.org/pod/Lingua::Boolean::Tiny) a try.
 
 Does that string look like they said "true" or "false"? To know, you
 have to check a lot of things. `Lingua::Boolean` attempts to do that
@@ -140,7 +145,7 @@ must be fully qualified - or use the object-oriented interface.
 
 # AVAILABILITY
 
-The project homepage is [http://p3rl.org/Lingua::Boolean](http://p3rl.org/Lingua::Boolean).
+The project homepage is [http://metacpan.org/release/Lingua-Boolean/](http://metacpan.org/release/Lingua-Boolean/).
 
 The latest version of this module is available from the Comprehensive Perl
 Archive Network (CPAN). Visit [http://www.perl.com/CPAN/](http://www.perl.com/CPAN/) to find a CPAN

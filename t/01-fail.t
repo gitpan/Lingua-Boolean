@@ -2,9 +2,10 @@
 use strict;
 use warnings;
 use Test::More 0.94 tests => 3;
-use Test::Builder 0.94 qw();
+use Test::Builder 0.94;
 
 use Lingua::Boolean;
+use experimental qw/smartmatch/;
 
 my $lang = 'nonexistent';
 my $bool = Lingua::Boolean->new();

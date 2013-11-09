@@ -1,9 +1,9 @@
 package Lingua::Boolean::French;
-# ABSTRACT: provides French rules to Lingua::Boolean
+# ABSTRACT: DEPRECATED - provides French rules to Lingua::Boolean
 use strict;
 use warnings;
 use utf8;
-our $VERSION = '0.007'; # VERSION
+our $VERSION = '0.008'; # VERSION
 
 
 
@@ -33,15 +33,15 @@ __END__
 
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
 =head1 NAME
 
-Lingua::Boolean::French - provides French rules to Lingua::Boolean
+Lingua::Boolean::French - DEPRECATED - provides French rules to Lingua::Boolean
 
 =head1 VERSION
 
-version 0.007
+version 0.008
 
 =head1 DESCRIPTION
 
@@ -60,7 +60,7 @@ L<Lingua::Boolean>
 
 =head1 AVAILABILITY
 
-The project homepage is L<http://p3rl.org/Lingua::Boolean>.
+The project homepage is L<http://metacpan.org/release/Lingua-Boolean/>.
 
 The latest version of this module is available from the Comprehensive Perl
 Archive Network (CPAN). Visit L<http://www.perl.com/CPAN/> to find a CPAN

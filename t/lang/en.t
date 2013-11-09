@@ -3,7 +3,8 @@ use strict;
 use warnings;
 use 5.0100;
 use Test::More 0.94 tests => 4;
-use Test::Builder 0.94 qw();
+use Test::Builder 0.94;
+use experimental qw/smartmatch/;
 
 use Lingua::Boolean;
 my $lang = 'en';

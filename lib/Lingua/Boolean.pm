@@ -1,12 +1,15 @@
 package Lingua::Boolean;
-# ABSTRACT: comprehensively parse boolean response strings
+# ABSTRACT: DEPRECATED module to comprehensively parse boolean response strings
 use strict;
 use warnings;
 use 5.010001;
-our $VERSION = '0.007'; # VERSION
+use experimental qw/smartmatch/;
+
+our $VERSION = '0.008'; # VERSION
 use Carp;
 use boolean 0.21 qw(true false);
-use String::Trim;
+use String::Trim qw(trim);
+use Module::Load qw(load);
 
 
 use Exporter qw(import);
@@ -17,10 +20,9 @@ sub new {
     my $class = shift;
     my $lang  = shift;
 
-    use Module::Pluggable search_path => [__PACKAGE__], require => 1;
-
     my $objects;
-    BUILD: foreach my $plugin ( __PACKAGE__->plugins() ) {
+    BUILD: foreach my $plugin ( map { __PACKAGE__ . "::$_" } qw/ English French / ) {
+        load $plugin;
         my $obj = $plugin->new();
         next BUILD if (defined $lang and $obj->{LANG} ne $lang);
 
@@ -110,19 +112,19 @@ __END__
 
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
 =head1 NAME
 
-Lingua::Boolean - comprehensively parse boolean response strings
+Lingua::Boolean - DEPRECATED module to comprehensively parse boolean response strings
 
 =head1 VERSION
 
-version 0.007
+version 0.008
 
 =head1 SYNOPSIS
 
-    use Lingua::Boolean;
+    use Lingua::Boolean; # NO! Don't use it - use Lingua::Boolean::Tiny
 
     # Use functional/procedural interface
     print "Do it? ";
@@ -156,6 +158,11 @@ version 0.007
     }
 
 =head1 DESCRIPTION
+
+B<This module is deprecated.> It began as an experiment with the concept,
+as well as API design. The experiment worked -- we proved that this
+module has a bad interface. If you are still interested in the conceptual
+experiment, give L<Lingua::Boolean::Tiny> a try.
 
 Does that string look like they said "true" or "false"? To know, you
 have to check a lot of things. C<Lingua::Boolean> attempts to do that
@@ -254,7 +261,7 @@ must be fully qualified - or use the object-oriented interface.
 
 =head1 AVAILABILITY
 
-The project homepage is L<http://p3rl.org/Lingua::Boolean>.
+The project homepage is L<http://metacpan.org/release/Lingua-Boolean/>.
 
 The latest version of this module is available from the Comprehensive Perl
 Archive Network (CPAN). Visit L<http://www.perl.com/CPAN/> to find a CPAN
